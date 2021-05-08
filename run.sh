@@ -1,15 +1,8 @@
-# Print csv header to data file
-echo -n "Initial measurement..."
-bin/speedtest --format=tsv --output-header > data.csv
-bin/speedtest --format=tsv >> data.csv
-bin/speedtest --format=tsv >> data.csv
-echo " Done!"
-
 while true; do
     echo -ne "Measuring...\033[0K"
-    bin/speedtest --format=tsv >> data.csv
-    bin/speedtest --format=tsv >> data.csv
-    bin/speedtest --format=tsv >> data.csv
+    echo "\"$(date +\%d.\%m.\%Y\ \%H:\%M:\%S)\",$(bin/speedtest --format=csv)" >> data.csv
+    echo "\"$(date +\%d.\%m.\%Y\ \%H:\%M:\%S)\",$(bin/speedtest --format=csv)" >> data.csv
+    echo "\"$(date +\%d.\%m.\%Y\ \%H:\%M:\%S)\",$(bin/speedtest --format=csv)" >> data.csv
     echo " Done!"
     tail -3 data.csv
     echo ""
