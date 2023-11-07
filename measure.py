@@ -35,11 +35,11 @@ def measure(file):
     
     print("Measuring download speed...")
     download_speed = test.download()
-    print("Download speed: " + str(download_speed) + " bytes per second")
+    print("Download speed: " + str(download_speed) + " bits per second")
     
     print("Measuring upload speed...")
     upload_speed = test.upload()
-    print("Upload speed: " + str(upload_speed) + " bytes per second")
+    print("Upload speed: " + str(upload_speed) + " bits per second")
     
     #print result to csv
     with open(file, 'a') as f:
