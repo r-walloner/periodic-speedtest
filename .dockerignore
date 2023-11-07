@@ -1,0 +1,9 @@
+.git/
+.gitignore
+Dockerfile
+.dockerignore
+measurements/
+measurements.csv
+README.md
+.venv/
+__pycache__/

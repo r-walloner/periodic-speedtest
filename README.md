@@ -14,3 +14,9 @@ By default the script takes measurements indefinitely, waits 60 seconds between 
 - `-f FILE --file FILE` (default: `measurements.csv`) Change the file the results are saved to. The file will be created if it doesn't exist yet.
 - `-i INTERVAL --interval INTERVAL` (default: 60) Change the interval between measurements. The value of INTERVAL is interpreted in seconds.  
 - `-n NUMBER --number NUMBER` (default: 0) Change the number of measurements to take. Zero means infinite measurements.
+
+### Running with Docker
+This script is also available as a Docker image. Modify the following command to suit your needs.
+```
+docker run -it --name speedtest -v /path/to/your/data:/var/log/periodic-speedtest rwalloner/periodic-speedtest
+```
